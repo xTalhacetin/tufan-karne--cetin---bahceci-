@@ -35,3 +35,16 @@ int en_yuksek_ders(int notlar[], int n) {
     }
     return en_iyi;
 }
+
+int hedef_not(int notlar[], int krediler[], int n, int ders, double hedef) {
+    int eski = notlar[ders];
+    for (int x = 0; x <= 100; x++) {
+        notlar[ders] = x;
+        if (agirlikli_ortalama(notlar, krediler, n) >= hedef) {
+            notlar[ders] = eski;
+            return x;
+        }
+    }
+    notlar[ders] = eski;
+    return -1;
+}

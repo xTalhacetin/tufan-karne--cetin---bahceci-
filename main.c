@@ -21,6 +21,7 @@ int main(void) {
         printf("4) Karne (harf notlari)\n");
         printf("5) Kalan dersler\n");
         printf("6) Basari durumu\n");
+        printf("7) Fizik I icin hedef not (75)\n");
         printf("8) 4'luk sistem ortalamasi\n");
         printf("0) Cikis\n> ");
         if (scanf("%d", &secim) != 1) break;
@@ -49,6 +50,12 @@ int main(void) {
             case 6:
                 printf("Basari durumu: %s\n", basari_durumu(agirlikli_ortalama(notlar, krediler, DERS_SAYISI)));
                 break;
+            case 7: {
+                int h = hedef_not(notlar, krediler, DERS_SAYISI, 2, 75.0);
+                if (h >= 0) printf("Fizik I butunlemeden en az %d alinmali\n", h);
+                else printf("Fizik I ile 75'e ulasilamaz\n");
+                break;
+            }
             case 8:
                 printf("4'luk sistem ortalamasi: %.2f\n", dortluk_ortalama(notlar, krediler, DERS_SAYISI));
                 break;
