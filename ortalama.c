@@ -18,6 +18,7 @@ double agirlikli_ortalama(int notlar[], int krediler[], int n) {
     int toplam = 0;
     int toplam_kredi = 0;
     for (int i = 0; i < n; i++) {
+        if (notlar[i] < 0) continue; /* -1: not yok, kredisi de sayilmaz */
         toplam += notlar[i] * krediler[i];
         toplam_kredi += krediler[i];
     }
