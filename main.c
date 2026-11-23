@@ -21,6 +21,7 @@ int main(void) {
         printf("4) Karne (harf notlari)\n");
         printf("5) Kalan dersler\n");
         printf("6) Basari durumu\n");
+        printf("8) 4'luk sistem ortalamasi\n");
         printf("0) Cikis\n> ");
         if (scanf("%d", &secim) != 1) break;
         switch (secim) {
@@ -47,6 +48,9 @@ int main(void) {
             }
             case 6:
                 printf("Basari durumu: %s\n", basari_durumu(agirlikli_ortalama(notlar, krediler, DERS_SAYISI)));
+                break;
+            case 8:
+                printf("4'luk sistem ortalamasi: %.2f\n", dortluk_ortalama(notlar, krediler, DERS_SAYISI));
                 break;
             case 0:
                 break;
