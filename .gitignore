@@ -55,3 +55,6 @@ dkms.conf
 *.dwo
 karne
 test_ortalama.exe
+test_ortalama
+test_degerlendirme
+test_degerlendirme.exe
