@@ -3,10 +3,14 @@
 double ortalama(int notlar[], int n) {
     if (n <= 0) return 0.0;
     int toplam = 0;
+    int sayac = 0;
     for (int i = 0; i < n; i++) {
+        if (notlar[i] < 0) continue; /* -1: not yok, ortalamaya katilmaz */
         toplam += notlar[i];
+        sayac++;
     }
-    return (double)toplam / n;
+    if (sayac == 0) return 0.0;
+    return (double)toplam / sayac;
 }
 
 double agirlikli_ortalama(int notlar[], int krediler[], int n) {
