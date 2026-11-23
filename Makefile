@@ -7,5 +7,8 @@ karne: main.c veri.c ortalama.c degerlendirme.c
 test_ortalama: test_ortalama.c veri.c ortalama.c
 	$(CC) $(CFLAGS) -o $@ $^
 
+test_degerlendirme: test_degerlendirme.c veri.c ortalama.c degerlendirme.c
+	$(CC) $(CFLAGS) -o $@ $^
+
 clean:
-	rm -f karne test_ortalama
+	rm -f karne test_ortalama test_degerlendirme
