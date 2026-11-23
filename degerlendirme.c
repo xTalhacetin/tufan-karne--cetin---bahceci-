@@ -27,4 +27,6 @@ int kalan_dersler(int notlar[], const char *adlar[], int n) {
 const char *basari_durumu(double ort) {
     if (ort >= 85) return "Yuksek onur";
     if (ort >= 75) return "Onur";
-    if (ort >= 50) return
+    if (ort >= 50) return "Basarili";
+    return "Basarisiz";
+}
